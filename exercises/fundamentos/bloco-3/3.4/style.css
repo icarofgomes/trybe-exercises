@@ -1,0 +1,47 @@
+body{
+    background-color: rgb(236, 233, 219);
+    color: rgb(15, 15, 15);
+    margin: 30px;
+}
+.painel{
+    display: inline-block;
+}
+
+table, th, td{
+    border: 1px solid rgb(15, 15, 15);;
+    border-collapse: collapse;
+}
+
+.first-section{
+    text-align: left;
+    width: 80%;
+}
+
+.main{
+    width: 80%;
+}
+
+.painel-lateral{
+    float: right;
+    position: sticky;
+}
+
+.painel-lateral h2{
+    text-align: center;
+}
+
+.menu li{
+    list-style: none;
+    display: inline-block;
+}
+
+li a{
+    text-decoration: none;
+    color: #FFFFFF;
+    background-color: rgb(108, 156, 245);
+    padding: 10px;
+}
+
+.final{
+    text-align: center;
+}
