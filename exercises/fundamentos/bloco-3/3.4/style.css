@@ -1,8 +1,9 @@
 body{
     background-color: rgb(236, 233, 219);
     color: rgb(15, 15, 15);
-    margin: 30px;
+    margin: 0;
 }
+
 .painel{
     display: inline-block;
 }
@@ -19,6 +20,7 @@ table, th, td{
 
 .main{
     width: 80%;
+    margin: 45px;
 }
 
 .painel-lateral{
@@ -38,10 +40,44 @@ table, th, td{
 li a{
     text-decoration: none;
     color: #FFFFFF;
-    background-color: rgb(108, 156, 245);
     padding: 10px;
+    margin-right: 50px;
 }
 
 .final{
     text-align: center;
+    clear: both;
+}
+
+.navegador{
+    background-color: rgb(108, 156, 245);
+    padding: 0px;
+}
+
+.header{
+    text-align: center;
+    font-size: 22px;
+}
+
+.rodape{
+    background-color: rgb(108, 156, 245);
+    color: #FFF;
+    padding: 5px;
+    width: 100%;
+    height: 181px;
+}
+
+.about{
+    float: left;
+    width: 35%;
+    margin-left: 45px;
+}
+
+.contato{
+    float: right;
+    width: 35%;
+}
+
+.menu a:hover{
+    font-weight: 800;
 }
