@@ -15,11 +15,10 @@ table, th, td{
 
 .first-section{
     text-align: left;
-    width: 80%;
 }
 
 .main{
-    width: 80%;
+    width: 60%;
     margin: 45px;
 }
 
@@ -46,7 +45,7 @@ li a{
 
 .final{
     text-align: center;
-    clear: both;
+    clear: left;
 }
 
 .navegador{
@@ -64,7 +63,11 @@ li a{
     color: #FFF;
     padding: 5px;
     width: 100%;
-    height: 181px;
+    height: 422px;
+}
+
+.rodape h4{
+    font-size: 19px;
 }
 
 .about{
@@ -80,4 +83,8 @@ li a{
 
 .menu a:hover{
     font-weight: 800;
+}
+
+.refer{
+    margin-left: 45px;
 }
