@@ -1,0 +1,90 @@
+body{
+    background-color: rgb(236, 233, 219);
+    color: rgb(15, 15, 15);
+    margin: 0;
+}
+
+.painel{
+    display: inline-block;
+}
+
+table, th, td{
+    border: 1px solid rgb(15, 15, 15);;
+    border-collapse: collapse;
+}
+
+.first-section{
+    text-align: left;
+}
+
+.main{
+    width: 60%;
+    margin: 45px;
+}
+
+.painel-lateral{
+    float: right;
+    position: sticky;
+}
+
+.painel-lateral h2{
+    text-align: center;
+}
+
+.menu li{
+    list-style: none;
+    display: inline-block;
+}
+
+li a{
+    text-decoration: none;
+    color: #FFFFFF;
+    padding: 10px;
+    margin-right: 50px;
+}
+
+.final{
+    text-align: center;
+    clear: left;
+}
+
+.navegador{
+    background-color: rgb(108, 156, 245);
+    padding: 0px;
+}
+
+.header{
+    text-align: center;
+    font-size: 22px;
+}
+
+.rodape{
+    background-color: rgb(108, 156, 245);
+    color: #FFF;
+    padding: 5px;
+    width: 100%;
+    height: 422px;
+}
+
+.rodape h4{
+    font-size: 19px;
+}
+
+.about{
+    float: left;
+    width: 35%;
+    margin-left: 45px;
+}
+
+.contato{
+    float: right;
+    width: 35%;
+}
+
+.menu a:hover{
+    font-weight: 800;
+}
+
+.refer{
+    margin-left: 45px;
+}
