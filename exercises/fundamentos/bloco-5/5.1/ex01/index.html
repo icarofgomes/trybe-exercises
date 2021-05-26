@@ -39,7 +39,46 @@
       </div>
     </div>
     <script>
-      document.getElementsByTagName('p')[0].innerText = "Em dois anos quero ser um desenvolvedor completo.";
+      function changeText(){
+        let element = document.getElementsByTagName('p')[1];
+        element.innerHTML = 'Em dois anos quero ser um desenvolvedor completo.'
+      };
+      changeText();
+
+      function changeColorMain(){
+        let element = document.getElementsByClassName('main-content')[0];
+        element.style.backgroundColor = 'rgb(76,164,109)';
+      };
+      changeColorMain();
+
+      function changeColorCenter(){
+        let element = document.getElementsByClassName('center-content')[0];
+        element.style.backgroundColor = '#ffffff';
+      };
+      changeColorCenter();
+
+      function titleRepair(){
+        let element = document.getElementsByTagName('h1')[0];
+        element.innerHTML = 'Exercício 5.1 - JavaScript';
+      };
+      titleRepair();
+
+      function pToUpperCase(){
+        let element = document.getElementsByTagName('p')[1];
+        element.innerHTML = element.innerHTML.toUpperCase();
+      }
+      pToUpperCase();
+
+      function pToConsoleLog(){
+        let element = document.getElementsByTagName('p');
+        for (let i = 0; i < element.length; i += 1){
+          console.log(element[i].innerHTML);
+        };
+      };
+      pToConsoleLog();
+
+
+    /*  document.getElementsByTagName('p')[0].innerText = "Em dois anos quero ser um desenvolvedor completo.";
       document.getElementsByClassName('main-content')[0].style.background = 'rgb(76,164,109)';
       document.getElementsByClassName('center-content')[0].style.background = 'white';
       document.getElementsByTagName('h1')[0].innerText = 'Exercício 5.1 - JavaScript';
@@ -47,6 +86,7 @@
       for (let i = 0; i < document.getElementsByTagName('p').length; i += 1){ 
         console.log(document.getElementsByTagName('p')[i].innerHTML);
       };
+    */
         /*
         Aqui você vai modificar os elementos já existentes utilizando apenas as funções:
         - document.getElementById()
