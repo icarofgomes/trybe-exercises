@@ -64,17 +64,23 @@
 
       // Ex. 2
       let divMain = document.createElement('div');
-      divMain.class = 'main-content';
+      divMain.className = 'main-content';
       document.body.appendChild(divMain);
 
       // Ex. 3
       let divCenter = document.createElement('div');
-      divCenter.class = 'center-content';
+      divCenter.className = 'center-content';
       divMain.appendChild(divCenter);
 
       // Ex. 4
-      
+      let p1 = document.createElement('p');
+      p1.innerText = 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque ex ratione temporibus provident asperiores. Laudantium quibusdam quos illo fugit nam perspiciatis? Voluptatibus optio animi quos sequi at voluptates autem tenetur.';
+      divCenter.appendChild(p1);
 
+      // Ex. 5
+      let divLeft = document.createElement('div');
+      divLeft.className = 'left-content';
+      divMain.appendChild(divLeft);
 
     </script>
   </body>
