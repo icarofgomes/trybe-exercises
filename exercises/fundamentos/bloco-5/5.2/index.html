@@ -57,6 +57,7 @@
   </head>
   <body>
     <script>
+      // PARTE 1
       // Ex. 1
       let h1 = document.createElement('h1');
       h1.innerHTML = 'Exercício 5.2 - JavaScript DOM';
@@ -110,6 +111,34 @@
         divMain.appendChild(h3);
       }
 
+      // PARTE 2
+      // Ex. 1
+      h1.className = 'title';
+
+      // Ex. 2
+      let h3 = document.querySelectorAll('h3');
+      for (let i = 0; i < h3.length; i += 1){
+        h3[i].className = 'description';
+      };
+
+      // Ex. 3
+      divMain.removeChild(divLeft);
+
+      // Ex. 4
+      divRight.style.marginRight = 'auto';
+
+      // Ex. 5
+      divMain.style.backgroundColor = 'green';
+
+      //Ex. 6
+      let lis = document.querySelectorAll('li');
+      for (let i = 0; i < lis.length; i += 1){
+        console.log(lis[i].innerHTML);
+        if (lis[i].innerHTML == 'Nove' || lis[i].innerHTML == 'Dez'){
+          lis[i].remove();
+        }
+      }
+  
     </script>
   </body>
 </html>
