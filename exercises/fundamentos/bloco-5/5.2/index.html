@@ -74,13 +74,41 @@
 
       // Ex. 4
       let p1 = document.createElement('p');
-      p1.innerText = 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque ex ratione temporibus provident asperiores. Laudantium quibusdam quos illo fugit nam perspiciatis? Voluptatibus optio animi quos sequi at voluptates autem tenetur.';
+      p1.innerText = 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque ex ratione temporibus provident asperiores.';
       divCenter.appendChild(p1);
 
       // Ex. 5
       let divLeft = document.createElement('div');
       divLeft.className = 'left-content';
       divMain.appendChild(divLeft);
+
+      // Ex. 6
+      let divRight = document.createElement('div');
+      divRight.className = 'right-content';
+      divMain.appendChild(divRight);
+
+      // Ex. 7
+      let img1 = document.createElement('img');
+      img1.src = 'https://picsum.photos/200';
+      img1.className = 'small-image';
+      divLeft.appendChild(img1);
+
+      // Ex. 8
+      let ul1 = document.createElement('ul');
+      let lista = ['Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis', 'Sete', 'Oito', 'Nove', 'Dez'];
+      let li;
+      for (let i = 0; i < lista.length; i += 1){
+        li = document.createElement('li');
+        li.innerText = lista[i];
+        ul1.appendChild(li);
+      }
+      divRight.appendChild(ul1);
+
+      // Ex. 9
+      for (let i = 0; i < 3; i += 1){
+        let h3 = document.createElement('h3');
+        divMain.appendChild(h3);
+      }
 
     </script>
   </body>
