@@ -113,3 +113,14 @@ function addTask (str){
   divTask.appendChild(addSpan);
 }
 addTask('Cozinhar');
+
+// Ex. 8
+function colorLegend(str){
+  let addDiv = document.createElement('div');
+  addDiv.className = 'task';
+  addDiv.style.backgroundColor = str;
+  let divTask = document.querySelector('.my-tasks');
+  divTask.appendChild(addDiv);
+}
+colorLegend('blue');
+
