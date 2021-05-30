@@ -124,3 +124,13 @@ function colorLegend(str){
 }
 colorLegend('blue');
 
+// Ex. 9
+let divToSelect = document.querySelector('.task');
+function taskSelect(event){
+  if (event.target.className == 'task selected'){
+    event.target.className = 'task';
+  } else {
+  event.target.className = 'task selected';
+  }
+}
+divToSelect.addEventListener('click', taskSelect);
