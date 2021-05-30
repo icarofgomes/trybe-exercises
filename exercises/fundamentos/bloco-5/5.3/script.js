@@ -41,14 +41,14 @@ setDays();
 
 // Ex. 2
 
-function addBtn(str){
+function addBtnHoliday(str){
   let btn = document.createElement('button');
   let divBtn = document.querySelector('.buttons-container');
   btn.id = 'btn-holiday';
   btn.innerHTML = str;
   divBtn.appendChild(btn);
 }
-addBtn('Feriados');
+addBtnHoliday('Feriados');
 
 // Ex. 3
 let btnHoliday = document.querySelector('#btn-holiday');
@@ -63,3 +63,13 @@ function holidayChange (){
   }
 }
 btnHoliday.addEventListener('click', holidayChange);
+
+// Ex. 4
+function addBtnFriday(str){
+  let btn = document.createElement('button');
+  let divBtn = document.querySelector('.buttons-container');
+  btn.id = 'btn-friday';
+  btn.innerHTML = str;
+  divBtn.appendChild(btn);
+}
+addBtnHoliday('Sexta-feira');
