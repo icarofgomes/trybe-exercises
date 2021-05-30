@@ -89,3 +89,18 @@ function fridayChange (){
   }
 }
 btnFriday.addEventListener('click', fridayChange);
+
+// Ex. 6
+let daysArray = document.querySelectorAll('.day');
+function focusDay(event){
+  event.target.style.fontSize = '25px';
+  event.target.style.fontWeight = '600';
+}
+function unFocusDay(event){
+  event.target.style.fontSize = '20px';
+  event.target.style.fontWeight = '500';
+}
+for (let i = 0; i < daysArray.length; i += 1){
+  daysArray[i].addEventListener('mouseover', focusDay);
+  daysArray[i].addEventListener('mouseleave', unFocusDay)
+}
