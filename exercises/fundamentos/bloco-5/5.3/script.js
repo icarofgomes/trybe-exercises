@@ -134,3 +134,16 @@ function taskSelect(event){
   }
 }
 divToSelect.addEventListener('click', taskSelect);
+
+// Ex. 10
+function selectedDay(event){
+  if (event.target.style.background == 'blue'){
+    event.target.style.background = 'rgb(238,238,238)';
+  } else {
+  event.target.style.background = 'blue';
+  }
+}
+
+for (let i = 0; i < daysArray.length; i += 1){
+  daysArray[i].addEventListener('click', selectedDay);
+}
