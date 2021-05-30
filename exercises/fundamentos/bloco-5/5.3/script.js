@@ -27,9 +27,11 @@ function setDays (){
     createLiDay = document.createElement('li');
     liDayContent = dezDaysList[i];
     createLiDay.innerHTML = liDayContent;
-  if ( dezDaysList[i] === 24 || dezDaysList[i] === 25 || dezDaysList[i] === 31){
+  if (dezDaysList[i] === 25){
+    createLiDay.className = 'day holiday friday';
+  } else if ( dezDaysList[i] === 24 || dezDaysList[i] === 31){
       createLiDay.className = 'day holiday';
-  } else if ( dezDaysList[i] === 4 || dezDaysList[i] === 11 || dezDaysList[i] === 18 || dezDaysList[i] === 25){
+  } else if ( dezDaysList[i] === 4 || dezDaysList[i] === 11 || dezDaysList[i] === 18){
     createLiDay.className = 'day friday';
   } else {
     createLiDay.className = 'day';
@@ -72,4 +74,18 @@ function addBtnFriday(str){
   btn.innerHTML = str;
   divBtn.appendChild(btn);
 }
-addBtnHoliday('Sexta-feira');
+addBtnFriday('Sexta-feira');
+
+// Ex. 5
+let btnFriday = document.querySelector('#btn-friday');
+function fridayChange (){
+  let fridayChangeDays = document.querySelectorAll('.friday');
+  for (let i = 0; i < fridayChangeDays.length; i += 1){
+    if (fridayChangeDays[i].style.backgroundColor == 'green'){
+      fridayChangeDays[i].style.backgroundColor = 'rgb(238,238,238)';
+    } else{
+      fridayChangeDays[i].style.backgroundColor = 'green';
+    }
+  }
+}
+btnFriday.addEventListener('click', fridayChange);
