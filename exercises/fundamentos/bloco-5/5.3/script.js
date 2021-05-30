@@ -147,3 +147,18 @@ function selectedDay(event){
 for (let i = 0; i < daysArray.length; i += 1){
   daysArray[i].addEventListener('click', selectedDay);
 }
+
+// Bonus
+let addBtn = document.querySelector('#btn-add');
+function addTaskList (){
+  let inputContent = document.querySelector('#task-input');
+  let liTasks = document.createElement('li');
+  if (inputContent.value === ''){
+    window.alert('Erro: O campo não pode ser vazio!')
+  } else {
+  liTasks.innerHTML = inputContent.value;
+  let ulTasks = document.querySelector('.task-list');
+  ulTasks.appendChild(liTasks);
+  }
+}
+addBtn.addEventListener('click', addTaskList)
