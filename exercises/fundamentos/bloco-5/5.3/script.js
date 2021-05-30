@@ -104,3 +104,12 @@ for (let i = 0; i < daysArray.length; i += 1){
   daysArray[i].addEventListener('mouseover', focusDay);
   daysArray[i].addEventListener('mouseleave', unFocusDay)
 }
+
+// Ex. 7
+function addTask (str){
+  let addSpan = document.createElement('span');
+  addSpan.innerHTML = str;
+  let divTask = document.querySelector('.my-tasks');
+  divTask.appendChild(addSpan);
+}
+addTask('Cozinhar');
