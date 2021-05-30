@@ -44,7 +44,22 @@ setDays();
 function addBtn(str){
   let btn = document.createElement('button');
   let divBtn = document.querySelector('.buttons-container');
+  btn.id = 'btn-holiday';
   btn.innerHTML = str;
   divBtn.appendChild(btn);
 }
 addBtn('Feriados');
+
+// Ex. 3
+let btnHoliday = document.querySelector('#btn-holiday');
+function holidayChange (){
+  let holidayChangeDays = document.querySelectorAll('.holiday');
+  for (let i = 0; i < holidayChangeDays.length; i += 1){
+    if (holidayChangeDays[i].style.backgroundColor == 'red'){
+      holidayChangeDays[i].style.backgroundColor = 'rgb(238,238,238)';
+    } else{
+      holidayChangeDays[i].style.backgroundColor = 'red';
+    }
+  }
+}
+btnHoliday.addEventListener('click', holidayChange);
