@@ -1,0 +1,22 @@
+h1{
+  text-align: center;
+  color: purple;
+}
+
+#texto-1 h2{
+  text-align: center;
+  color: purple;
+}
+
+p{
+  width: 50%;
+  margin: auto;
+  margin-top: 1%;
+}
+
+.function-container{
+  width: 50%;
+  margin: auto;
+  margin-top: 2%;
+}
+
