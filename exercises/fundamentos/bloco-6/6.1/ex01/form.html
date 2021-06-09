@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forms Exercises</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <form action="" method="GET">
+    <fieldset>
+      <legend>Dados Pessoais</legend>
+      <label for="input-name">Nome:
+        <input type="text" id ="input-name" maxlength="40" required>
+      </label>
+      <label for="input-email">E-mail:
+        <input type="text" id ="input-email" maxlength="50" required>
+      </label>
+      <label for="input-cpf">CPF:
+        <input type="text" id ="input-cpf" maxlength="11" required>
+      </label>
+      <label for="input-address">Endereço:
+        <input type="text" id ="input-address" maxlength="200" required>
+      </label>
+      <label for="input-city">Cidade:
+        <input type="text" id ="input-city" maxlength="28" required>
+      </label>
+      <label for="select-state">Estado:
+        <select name="estado" id="select-state"></select>
+      </label>
+    </fieldset>
+  </form>
+  <script src="script.js"></script>
+</body>
+</html>
