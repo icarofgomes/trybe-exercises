@@ -1,5 +1,7 @@
 const selectStateField = document.querySelector('#select-state');
 const inputedDate = document.querySelector('#input-date');
+const subitButton = document.querySelector('#submit-button');
+const inputName = document.querySelector('#input-name');
 const states = 
 [
   'Acre - AC',
@@ -58,3 +60,19 @@ function verifyDate() {
   }
 }
 inputedDate.addEventListener('change', verifyDate);
+
+function verifyName(){
+  let trimmedText = inputName.value.trim();
+  if ( trimmedText.length === 0 || trimmedText.length > 40){
+    return true;
+  }
+}
+
+function validateData(event){
+  event.preventDefault();
+  verifyName();
+  if (verifyName() === true){
+    return alert('Deu ruim!')
+  }
+}
+subitButton.addEventListener('click', validateData);

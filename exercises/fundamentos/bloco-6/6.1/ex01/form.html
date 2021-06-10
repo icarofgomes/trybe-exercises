@@ -8,50 +8,76 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <h1>Ficha do Colaborador</h1>
   <form action="" method="GET">
-    <fieldset>
-      <legend>Dados Pessoais</legend>
-      <label for="input-name">Nome:
-        <input type="text" id ="input-name" maxlength="40" required>
-      </label>
-      <label for="input-email">E-mail:
-        <input type="text" id ="input-email" maxlength="50" required>
-      </label>
-      <label for="input-cpf">CPF:
-        <input type="text" id ="input-cpf" maxlength="11" required>
-      </label>
-      <label for="input-address">Endereço:
-        <input type="text" id ="input-address" maxlength="200" required>
-      </label>
-      <label for="input-city">Cidade:
-        <input type="text" id ="input-city" maxlength="28" required>
-      </label>
-      <label for="select-state">Estado:
-        <select name="estado" id="select-state" required></select>
-      </label>
-      <label for="input-type1">Casa
-        <input type="radio" name="input-type" value="casa" id="input-type1" required>
-      </label>
-      <label for="input-type2">Apartamento
-        <input type="radio" name="input-type" value="apartamento" id="input-type2" required>
-      </label>
-    </fieldset>
+    <section>
+      <fieldset>
+        <legend>Dados Pessoais</legend>
+        <div>
+          <label for="input-name">Nome:
+            <input type="text" id ="input-name" maxlength="40" required>
+          </label>
+        </div>
+        <div>
+          <label for="input-email">E-mail:
+            <input type="text" id ="input-email" maxlength="50" required>
+          </label>
+        </div>
+        <div>
+          <label for="input-cpf">CPF:
+            <input type="text" id ="input-cpf" maxlength="11" required>
+          </label>
+        </div>
+        <div>
+          <label for="input-address">Endereço:
+            <input type="text" id ="input-address" maxlength="200" required>
+          </label>
+        </div>
+        <div>
+          <label for="input-city">Cidade:
+            <input type="text" id ="input-city" maxlength="28" required>
+          </label>
+        </div>
+        <div>
+          <label for="select-state">Estado:
+            <select name="estado" id="select-state" required></select>
+          </label>
+        </div>
+        <div>
+          <label for="input-type1">Casa
+            <input type="radio" name="input-type" value="casa" id="input-type1" required>
+          </label>
+          <label for="input-type2">Apartamento
+            <input type="radio" name="input-type" value="apartamento" id="input-type2" required>
+          </label>
+        </div>
+      </fieldset>
+    </section>
     <fieldset>
       <legend>Dados do último emprego</legend>
-      <p>Resumo:</p>
-      <label for="last-job">
-        <textarea name="last-job" id="last-job" cols="30" rows="10" maxlength="1000" required></textarea>
-      </label>
-      <label for="input-position"> Cargo:
-        <input type="text" id="input-position" maxlength="40" required>
-      </label>
-      <label for="input-description"> Descrição do cargo:
-        <input type="text" id="input-description" maxlength="500" required>
-      </label>
-      <label for="input-date">Data de início:
-        <input type="text" id="input-date" required>
-      </label>
+      <div>
+        <p>Resumo:</p>
+        <label for="last-job">
+          <textarea name="last-job" id="last-job" cols="30" rows="10" maxlength="1000" required></textarea>
+        </label>
+      </div>
+      <div>
+        <label for="input-position"> Cargo:
+          <input type="text" id="input-position" maxlength="40" required>
+        </label>
+      </div>
+      <div>
+        <label for="input-description"> Descrição do cargo:
+          <input type="text" id="input-description" maxlength="500" required>
+        </label>
+      </div>
+      <div>
+        <label for="input-date">Data de início:
+          <input type="text" id="input-date" required>
+        </label>
+      </div>
     </fieldset>
+    <button type="submit" id='submit-button'>Enviar</button>
   </form>
   <script src="script.js"></script>
 </body>
