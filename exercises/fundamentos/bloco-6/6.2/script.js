@@ -1,5 +1,4 @@
 const selectStateField = document.querySelector('#select-state');
-const inputedDate = document.querySelector('#input-date');
 const subitButton = document.querySelector('#submit-button');
 const inputName = document.querySelector('#input-name');
 const inputEmail = document.querySelector('#input-email');
@@ -42,6 +41,24 @@ const states =
   'Distrito Federal - DF',
 ];
 
+const picker = new Pikaday({
+  field: document.getElementById('datepicker'),
+  format: 'D/M/YYYY',
+  toString(date, format) {
+    const day = date.getDate();
+    const month = date.getMonth() + 1;
+    const year = date.getFullYear();
+    return `${day}/${month}/${year}`;
+  },
+  parse(dateString, format) {
+    const parts = dateString.split('/');
+    const day = parseInt(parts[0], 10);
+    const month = parseInt(parts[1], 10) -1;
+    const year = parseInt(parts[2], 10);
+    return new Date(year, month, day);
+  }
+});
+
 function stateFieldLoad(){
   for (let i = 0; i < states.length; i += 1){
     let newOptionState = document.createElement('option');
@@ -52,108 +69,104 @@ function stateFieldLoad(){
   }
 }
 
-function verifyName(){
-  let trimmedName = inputName.value.trim();
-  if (trimmedName.length === 0 || trimmedName.length > 40){
-    let errorMsg = document.createElement('p');
-    errorMsg.innerHTML = `Nome inválido: Tente novamente!`;
-    resultField.appendChild(errorMsg);
-  } else {
-    return false;
-  }
-}
+new JustValidate('.js-form', {
+  rules: {
+    name: {
+      required: true,
+      maxLength: 40
+    },
+    email: {
+      required: true,
+      email: true,
+      maxLength: 50
+    },
+    cpf: {
+      required: true,
+      minLength: 11,
+      maxLength: 11
+    },
+    address: {
+      required: true,
+      maxLength: 200
+    },
+    city: {
+      required: true,
+      maxLength: 28
+    },
+    state: {
+      required: true
+    },
+    radio: {
+      required: true
+    },
+    abstract: {
+      required: true,
+      maxLength: 1000
+    },
+    role: {
+      required: true,
+      maxLength: 40
+    },
+    description: {
+      required: true,
+      maxLength: 500
+    },
+    date: {
+      required: true
+    }
+  },
+  messages: {
+    name: {
+      required: 'Campo obrigatório, tente novamente!',
+      maxLength: 'Texto muito longo, limite de 40 caracteres.'
+    },
+    email: {
+      required: 'Campo obrigatório, tente novamente!',
+      email: 'Insira um e-mail válido!',
+      maxLength: 'Texto muito longo, limite de 50 caracteres.'
+    },
+    cpf: {
+      required: 'Campo obrigatório, tente novamente!',
+      minLength: 'Tamanho incorreto, digite novamente',
+      maxLength: 'Tamanho incorreto, digite novamente'
+    },
+    address: {
+      required: 'Campo obrigatório, tente novamente!',
+      maxLength: 'Texto muito longo, limite de 200 caracteres.'
+    },
+    city: {
+      required: 'Campo obrigatório, tente novamente!',
+      maxLength: 'Texto muito longo, limite de 28 caracteres.'
+    },
+    state: {
+      required: 'Campo obrigatório, tente novamente!'
+    },
+    radio: {
+      required: 'Campo obrigatório, tente novamente!'
+    },
+    abstract: {
+      required: 'Campo obrigatório, tente novamente!',
+      maxLength: 'Texto muito longo, limite de 1000 caracteres.'
+    },
+    role: {
+      required: 'Campo obrigatório, tente novamente!',
+      maxLength: 'Texto muito longo, limite de 40 caracteres.'
+    },
+    description: {
+      required: 'Campo obrigatório, tente novamente!',
+      maxLength: 'Texto muito longo, limite de 500 caracteres.'
+    },
+    date: {
+      required: 'Campo obrigatório, tente novamente!'
+    }
+  },
 
-function verifyEmail(){
-  let trimmedEmail = inputEmail.value.trim();
-  if (trimmedEmail.length === 0 || trimmedEmail.length > 50){
-    let errorMsg = document.createElement('p');
-    errorMsg.innerHTML = `Email inválido: Tente novamente!`;
-    resultField.appendChild(errorMsg);
-  }else {
-    return false;
-  }
-}
+  submitHandler: function (form, values) {
+    console.log('DEU')
+  },
+});
 
-function verifyCPF(){
-  let trimmedCPF = inputCPF.value.trim();
-  if (trimmedCPF.length === 0 || trimmedCPF.length > 11){
-    let errorMsg = document.createElement('p');
-    errorMsg.innerHTML = `CPF inválido: Tente novamente!`;
-    resultField.appendChild(errorMsg);
-  }else {
-    return false;
-  }
-}
-
-function verifyAdress(){
-  let trimmedAdress = inputAdress.value.trim();
-  if (trimmedAdress.length === 0 || trimmedAdress.length > 200){
-    let errorMsg = document.createElement('p');
-    errorMsg.innerHTML = `Endereço inválido: Tente novamente!`;
-    resultField.appendChild(errorMsg);
-  }else {
-    return false;
-  }
-}
-
-function verifyCity(){
-  let trimmedCity = inputCity.value.trim();
-  if (trimmedCity.length === 0 || trimmedCity.length > 28){
-    let errorMsg = document.createElement('p');
-    errorMsg.innerHTML = `Cidade inválida: Tente novamente!`;
-    resultField.appendChild(errorMsg);
-  }else {
-    return false;
-  }
-}
-
-function verifyAbstract(){
-  let trimmedAbstract = inputAbstract.value.trim();
-  if (trimmedAbstract.length === 0 || trimmedAbstract.length > 1000){
-    let errorMsg = document.createElement('p');
-    errorMsg.innerHTML = `Resumo inválido: Tente novamente!`;
-    resultField.appendChild(errorMsg);
-  }else {
-    return false;
-  }
-}
-
-function verifyPosition(){
-  let trimmedPosition = inputPosition.value.trim();
-  if (trimmedPosition.length === 0 || trimmedPosition.length > 40){
-    let errorMsg = document.createElement('p');
-    errorMsg.innerHTML = `Cargo inválido: Tente novamente!`;
-    resultField.appendChild(errorMsg);
-  }else {
-    return false;
-  }
-}
-
-function verifyDescription(){
-  let trimmedDescription = inputDescription.value.trim();
-  if (trimmedDescription.length === 0 || trimmedDescription.length > 500){
-    let errorMsg = document.createElement('p');
-    errorMsg.innerHTML = `Descrição do cargo inválida: Tente novamente!`;
-    resultField.appendChild(errorMsg);
-  }else {
-    return false;
-  }
-}
-
-function verifyDate() {
-  const itemContent = inputedDate.value;
-  const day = itemContent.slice(0, 2);
-  const mounth = itemContent.slice(3, 5);
-  const year = itemContent.slice(6, 10);
-  if (day < 1 || day > 31 || mounth < 1 || mounth > 12 || year < 0) {
-    let errorMsg = document.createElement('p');
-    errorMsg.innerHTML = `Formato de data inválido: Tente novamente!`;
-    resultField.appendChild(errorMsg);
-  }else {
-    return false;
-  }
-}
-
+/*
 function resetResults(){
   resultField.innerHTML = '';
   if (resultField.classList.contains('error')){
@@ -170,7 +183,7 @@ function validateData(event){
   
   if (verifyName() !== false || verifyEmail() !== false || verifyCPF() !== false ||
       verifyAdress() !== false || verifyCity() !== false || verifyAbstract() !== false ||
-      verifyPosition() !== false || verifyDate() !== false){
+      verifyPosition() !== false){
         resultField.classList.add('error');
   } else {
     resultField.innerHTML += `<strong>Nome:</strong> ${inputName.value}<br>`;
@@ -184,10 +197,11 @@ function validateData(event){
     resultField.innerHTML += `<strong>Resumo:</strong> ${inputAbstract.value}<br>`;
     resultField.innerHTML += `<strong>Cargo:</strong> ${inputPosition.value}<br>`;
     resultField.innerHTML += `<strong>Descrição do cargo:</strong> ${inputDescription.value}<br>`;
-    resultField.innerHTML += `<strong>Data de Início:</strong> ${inputedDate.value}`;
+    resultField.innerHTML += `<strong>Data de Início:</strong> ${picker}`;
   }
 }
 
-window.addEventListener('load', stateFieldLoad);
 subitButton.addEventListener('click', validateData);
 resetButton.addEventListener('click', resetResults);
+*/
+window.addEventListener('load', stateFieldLoad);
