@@ -173,7 +173,6 @@ function validateData(event){
       verifyPosition() !== false || verifyDate() !== false){
         resultField.classList.add('error');
   } else {
-    resultField.classList.add('sucess');
     resultField.innerHTML += `<strong>Nome:</strong> ${inputName.value}<br>`;
     resultField.innerHTML += `<strong>Email:</strong> ${inputEmail.value}<br>`;
     resultField.innerHTML += `<strong>CPF:</strong> ${inputCPF.value}<br>`;
