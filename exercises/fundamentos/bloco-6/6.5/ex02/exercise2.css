@@ -1,0 +1,32 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #ff7626;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+header ul {
+  display: flex;
+  justify-content:space-evenly;
+}
+
+header li {
+  list-style: none;
+  color: #fafafa;
+}
+
+header p {
+  font-size: x-large;
+  color: #fafafa;
+  font-weight: 600;
+  padding: 0.3em;
+}
