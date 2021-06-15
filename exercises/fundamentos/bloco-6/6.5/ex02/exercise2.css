@@ -7,6 +7,10 @@ html {
   padding: 0;
 }
 
+body {
+  background-color: #fafae9;
+}
+
 header {
   background-color: #ff7626;
   display: flex;
@@ -22,6 +26,8 @@ header ul {
 header li {
   list-style: none;
   color: #fafafa;
+  font-size: large;
+  margin-bottom: 0.4rem;
 }
 
 header p {
@@ -29,4 +35,73 @@ header p {
   color: #fafafa;
   font-weight: 600;
   padding: 0.3em;
+}
+
+aside {
+  display: none;
+}
+
+.main-content {
+  width: 80%;
+  margin: auto;
+  font-size: x-large;
+}
+
+.main-content h1 {
+  font-size: xx-large;
+}
+
+.main-content p {
+  margin-bottom: 0.8em; 
+}
+
+footer {
+  background-color: #ff7626;
+  color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 0.4rem;
+}
+
+footer h3, footer p {
+  margin-bottom: 0.4rem;
+}
+
+footer p:nth-of-type(2) {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  aside:nth-of-type(2) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 80%;
+    margin: 1rem auto;
+  }
+
+  aside:nth-of-type(2) li{
+    list-style: none;
+  }
+
+  footer {
+    font-size: large;
+    padding-bottom: 0.8rem;
+  }
+
+  footer h3 {
+    font-size: x-large;
+  }
+
+  footer p:nth-of-type(2) {
+    display: flex;
+    width: 95%;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  
 }
