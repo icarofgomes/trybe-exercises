@@ -1,0 +1,42 @@
+body {
+  font-size: x-large;
+  margin: 1.5rem;
+}
+
+h1 {
+  font-size: xx-large;
+}
+
+h2 {
+  font-size: xx-large;
+}
+
+img {
+    max-width: 100%;
+}
+
+figure {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    background-color: #ebf5fd;
+    font-size: large;
+  }
+  
+  figure {
+    float: left;
+    width: 35%
+  }
+}
+
+@media screen and (min-width: 960px) {
+  body {
+    background-color: #f7dada;
+    font-size: x-large;
+    margin: auto;
+    max-width: 80%;
+  }
+}
