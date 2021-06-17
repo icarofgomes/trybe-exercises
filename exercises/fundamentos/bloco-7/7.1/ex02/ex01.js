@@ -6,4 +6,4 @@ const fatResult = n => {
   return results;
 }
 
-console.log(fatResult(5));
+console.log(fatResult(1));
