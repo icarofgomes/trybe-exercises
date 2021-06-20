@@ -47,3 +47,36 @@ const getValueByNumber = (obj, number) => Object.values(obj)[number];
 
 // Ex 8
 const verifyPair = (obj, key, value) => obj[key] === value ? true : false;
+
+// Bonus
+const mathCount = (obj) => {
+  const arrayLessons = Object.keys(obj);
+  let counter = 0;
+  for (let i = 0; i < arrayLessons.length; i += 1){
+    const currentLesson = arrayLessons[i];
+    if (obj[currentLesson].materia === 'Matemática'){
+      counter += obj[currentLesson].numeroEstudantes;
+    }
+  }
+  return counter;
+}
+
+const createReport = (obj, name) => {
+  const objCreated = {};
+  const arrayObjLessons = Object.keys(obj);
+  const arrayLessons = [];
+  let counter = 0;
+
+  for (let i = 0; i < arrayObjLessons.length; i += 1) {
+    const currentLesson = arrayObjLessons[i];
+    if (obj[currentLesson].professor === name) {
+      arrayLessons.push(obj[currentLesson].materia);
+      counter += obj[currentLesson].numeroEstudantes;
+    }
+  }
+  objCreated.professor = name;
+  objCreated.aulas = arrayLessons;
+  objCreated.estudantes = counter;
+  return objCreated;
+}
+
