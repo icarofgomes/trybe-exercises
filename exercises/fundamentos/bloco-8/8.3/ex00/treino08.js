@@ -75,5 +75,7 @@ const estudantes = [
 
 const allNameStudents = estudantes.filter((estudante) => estudante.turno === 'Manhã').map((estudante) => `${estudante.nome} ${estudante.sobrenome}`);
 
-const getStudent = nomeStudent => estudantes.find((estudante) => estudante.nome === nomeStudent);
-const getSituation = nomeStudent => getStudent(nomeStudent)
+const getStudent = (nomeStudent, obj) => obj.find((estudante) => estudante.nome === nomeStudent);
+const getSituation = obj => obj.materias.map((elemento) =>
+  `${elemento.name}: ${elemento.nota >= 60 ? 'Aprovado' : 'Reprovado'}`);
+const verifySit = (nome, object) => getSituation(getStudent(nome, object));
