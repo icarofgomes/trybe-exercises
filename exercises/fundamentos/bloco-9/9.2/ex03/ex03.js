@@ -4,10 +4,14 @@ const promisse = new Promise((resolve, reject) => {
     const number = Math.round(Math.random()*50)**2;
     arrayCreated.push(number);
   }
-  if (arrayCreated.reduce((acc, curr) => acc + curr) < 8000){
+  const number = arrayCreated.reduce((acc, curr) => acc + curr);
+  if (number > 8000){
     return reject();
   }
-  resolve();
+  resolve(number);
 })
-  .then(() => console.log(`Promise Resolvida`))
+  .then((number) => {
+    const arrayFinal = [(number/2),(number/3) ,(number/5) ,(number/10)];
+    return console.log(arrayFinal);
+  })
   .catch(() => console.log(`Promise Rejeitada`))
