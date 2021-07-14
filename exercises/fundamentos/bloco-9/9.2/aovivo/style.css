@@ -1,0 +1,23 @@
+h1 {
+  text-align: center;
+}
+
+li > img {
+  max-width: 75 px;
+  max-height: 75px;
+  transition: 1s;
+  margin-bottom: 20px;
+}
+
+li > img:hover {
+  max-height: 150px;
+  max-height: 150px;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  text-align: center;
+}
