@@ -1,14 +1,40 @@
-.App {
+body {
+  background-color: #2e2e2e;
+  color: #bebeba
+}
+
+.App h1{
   text-align: center;
 }
 
 .form {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
-label {
-margin: 3px;
+fieldset {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 35%;
+  margin: 10px auto;
+}
+
+fieldset label {
+margin: 6px;
+display: flex;
+flex-direction: column;
+}
+
+.error {
+  color: red;
+  font-weight: 250;
+}
+
+.terms {
+  text-align: center;
+}
+
+input, textarea, select {
+  margin: 3px
 }
