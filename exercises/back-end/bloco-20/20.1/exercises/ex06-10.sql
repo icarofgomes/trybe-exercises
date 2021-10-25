@@ -1,0 +1,11 @@
+SELECT COUNT(*) FROM hr.employees WHERE JOB_ID = 'IT_PROG';
+SELECT JOB_ID, SUM(SALARY) FROM hr.employees GROUP BY JOB_ID;
+SELECT JOB_ID, SUM(SALARY) FROM hr.employees WHERE JOB_ID = 'IT_PROG' GROUP BY JOB_ID;
+SELECT JOB_ID, AVG(SALARY) AS 'Average' FROM hr.employees
+	WHERE JOB_ID <> 'IT_PROG'
+	GROUP BY JOB_ID
+	ORDER BY Average;
+SELECT DEPARTMENT_ID, AVG(SALARY), COUNT(*) AS 'func'
+	FROM hr.employees 
+    GROUP BY department_id
+    HAVING func > 10;
