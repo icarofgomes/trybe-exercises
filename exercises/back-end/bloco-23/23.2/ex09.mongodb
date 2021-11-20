@@ -1,0 +1,5 @@
+use("business")
+db.restaurants.find({ $and: [
+  { rating: { $not: { $eq: 1 } } },
+  { cuisine: { $not: { $eq: "American"} } }
+]}).count()
