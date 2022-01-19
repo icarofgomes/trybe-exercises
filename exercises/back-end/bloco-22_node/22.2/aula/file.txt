@@ -1,0 +1,1 @@
+Meu texto utilizando Async Await
